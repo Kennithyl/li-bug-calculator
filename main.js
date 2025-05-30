@@ -1,15 +1,11 @@
 // main.js
 
-// Color GetMax() {} ...
-
-// string ToLower(string str) {} ...
-
 import { Livlies } from './livly.js';
 import { Color } from './bfs_color.js';
 import { FindBugs } from './bfs_color.js';
 import { Bugs } from './bfs_color.js';
 
-// int main() {} below //
+// Sooo much code below. No comments. At least, not a lot. I'm so sorry. //
 
 const livliesSelect = document.getElementById("livlies");
 
@@ -42,7 +38,7 @@ function toggleMaxRGB() {
     const div = document.getElementById("maxRGB");
   
     if (select.value == "None") {
-      div.style.display = ""; // or "" to reset to default
+      div.style.display = "";
     } 
     else {
       div.style.display = "none";
@@ -69,33 +65,39 @@ function validateInputs() {
     const submitBtn = document.getElementById("submit");
 
     const livly = document.getElementById("livlies");
+    
+    const inputs = [
+        "currR", "currG", "currB",
+        "tarR", "tarG", "tarB"
+      ];
 
     if (livly.value === "None") { // I'm not validating anything if you manually enter values larger than your own maximum. Sorry.
         document.getElementById("valError").style.display = "none";
       
-        /*const inputs = [
-          "currR", "currG", "currB",
-          "tarR", "tarG", "tarB"
-        ];
-        inputs.forEach(id => {
-          const el = document.getElementById(id);
-          el.classList.remove("input-error"); // or manually reset style
-          el.style.border = ""; // Reset border color if you used red, for example
-        });*/
-      
-        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").disabled = false;
       
         return;
     }
     else {
-        valR = Number(Livlies[livly.value].r);
-        valG = Number(Livlies[livly.value].g);
-        valB = Number(Livlies[livly.value].b);
+      let empty = false;
+      for (let id of inputs) {
+        const value = document.getElementById(id).value;
+        if (value.trim() === "") {
+          empty = true;
+          break;
+        }
+      }
+      
+      if (empty) {
+        submitBtn.disabled = true;
+        div2.style.display = "none"; // Don't show the error yet
+        return; // Exit the function early
+      }
+      
+      valRGB.r = Number(Livlies[livly.value].r);
+      valRGB.g = Number(Livlies[livly.value].g);
+      valRGB.b = Number(Livlies[livly.value].b);
     }
-
-    valRGB.r = valR;
-    valRGB.g = valG;
-    valRGB.b = valB;
 
     const values = {
       currR: parseInt(document.getElementById("currR").value),
