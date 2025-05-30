@@ -1,4 +1,4 @@
-This is the JavaScript code available for the Livly Island calculator posted on my website here: https://falmer.neocities.org/tools/bug-calculator
+This is the JavaScript code available for the Livly Island calculator posted on my website here: https://falmer.neocities.org/tools/bug-calculator with the attached HTML as well.
 I'm posting this on GitHub both so I can say I did something productive with my eight hours today and in case anyone wants to look at the source code.
 
 The C++ version of the code can be found here: https://onlinegdb.com/-7-t_9Lr0
