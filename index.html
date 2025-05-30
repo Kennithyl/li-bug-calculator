@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<h1>Livly Island Feed Calculator (Probably Exact!)</h1>
+	</head>
+	<body>
+		<!-- <div id="output">Lorem Ipsum</div>-->
+		<label for="livlies">Select your Livly species (or keep it blank if your Livly is not in the list):</label>
+
+		<select name="livlies" id="livlies">
+			<option value="None"> </option>
+			<!--<option value="Marmolu">Marmolu</option>
+			<option value="Neo Pygmy">Neo Pygmy</option>
+			<option value="Byakko"></option>
+			<option value="Cornu Lepus"></option>
+			<option value="My Melody Cornu Lepus"></option>
+			<option value="Hamlot"></option>
+			<option value="Hari Nikoge"></option>
+			<option value="Hilo Pumilio"></option>
+			<option value="Hime Zella"></option>
+			<option value="Janomonoke"></option>
+			<option value="Kurome"></option>
+			<option value="Leosolem"></option>
+			<option value="Lovox"></option>
+			<option value="Marmolu"></option>
+			<option value="Mizukamino Orochi"></option>
+			<option value="Moto Pumilio"></option>
+			<option value="Murakumono Temma"></option>
+			<option value="Neo Pygmy"></option>
+			<option value="Pomfloat"></option>
+			<option value="Primitive Pygmy"></option>
+			<option value="Rabine"></option>
+			<option value="Rion"></option>
+			<option value="Ryo Pumilio"></option>
+			<option value="Sunairo Yunk"></option>
+			<option value="Tonasu Modoki"></option>
+			<option value="Tsunotsuki Uryu"></option>
+			<option value="Watame"></option>-->
+		</select> 
+
+		<p>RGB values below are in ### format, I.E. 001 or 254. Enter one value at a time with no spaces. Do not hit enter after typing a value.</p>
+
+		<div id="maxRGB" style="display: none;">
+			<label for="maxR">Max. R:</label>
+			<input type="text" id="maxR" name="maxR"> 
+			<label for="maxG">Max. G:</label>
+			<input type="text" id="maxG" name="maxG"> 
+			<label for="maxB">Max. B:</label>
+			<input type="text" id="maxB" name="maxB"><br><br>
+		</div>
+
+		<div id="currRGB">
+			<label for="currR">Current R:</label>
+			<input type="text" id="currR" name="currR"> 
+			<label for="currG">Current G:</label>
+			<input type="text" id="currG" name="currG"> 
+			<label for="currB">Current B:</label>
+			<input type="text" id="currB" name="currB"><br><br>
+		</div>
+
+		<div id="tarRGB">
+			<label for="tarR">Desired R:</label>
+			<input type="text" id="tarR" name="tarR"> 
+			<label for="tarG">Desired G:</label>
+			<input type="text" id="tarG" name="tarG"> 
+			<label for="tarB">Desired B:</label>
+			<input type="text" id="tarB" name="tarB"><br><br>
+		</div>
+
+		<p>Done? Click submit!:</p>
+
+		<button id="submit">Submit</button>
+
+		<p id="valError" style="display: none;">Error! Current or desired RGB values exceeds chosen species maximum!<br><br>Cannot submit in this state. Please check your values over and try again.</p>
+
+		<p id="output"></p>
+		<script type="module" src="./main.js"></script> 
+	</body>
+	<footer>
+		<p>------<br>Credit: <a href="https://www.reddit.com/user/RainbowPoodle6/">u/RainbowPoodle6</a> for making the <a href="https://scratch.mit.edu/projects/1006599857/">Scratch Project (link)</a> that inspired this!<br>
+		Also thanks to ChatGPT for helping me figure out how BFS algorithms work, and helping me convert my C++ code to JS. Man, am I bad at JavaScript.<br><br>
+		This calculator was brought to you by <a href="https://www.reddit.com/user/methodicalPrince/">u/methodicalPrince</a>! My Livly Island ID is gkn8favf.<br><br>
+		Questions? Comments? Concerns? Bugs to report? Send me a message! Feel free to add me in-game too if you want! :]</p>
+	</footer>
+</html>
